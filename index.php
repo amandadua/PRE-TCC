@@ -327,7 +327,7 @@
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="popular-badge">Mais Popular</div>
+                    <div class="popular-badge">Plano pago</div>
                     <div class="plan-header">
                         <h3 class="plan-name">Premium</h3>
                         <div class="plan-price">
