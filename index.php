@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelecta - Sua Aprovação em Matemática</title>
+    <link rel="stylesheet" href="templates/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app')
+    </script>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="templates/img/logo-azul.png" alt="Intelecta Logo" class="logo">
+                <span class="brand-name">Intelecta</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="View/login.php" class="btn-login">Entrar</a>
+                <a href="View/cadastro.php" class="btn-cta">Começar Agora</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span>Plataforma gratuita de Matemática</span>
+                </div>
+                <h1 class="hero-title">
+                    Domine a Matemática e
+                    <span class="highlight">Conquiste sua Aprovação</span>
+                </h1>
+                <p class="hero-description">
+                    A plataforma completa e gratuita para estudantes do 3º ano do Ensino Médio que querem
+                    alcançar a nota máxima em Matemática no ENEM, vestibulares e faculdade.
+                    Aprenda com exercícios práticos e metodologia comprovada.
+                </p>
+                <div class="hero-cta">
+                    <a href="View/cadastro.php" class="btn-primary">
+                        <span><strong>Começar Gratuitamente</strong></span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number"><strong>10k+</strong></span>
+                        <span class="stat-label">Alunos Aprovados</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number"><strong>95%</strong></span>
+                        <span class="stat-label">Taxa de Aprovação</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number"><strong>4.9/5</strong></span>
+                        <span class="stat-label">Avaliação dos Alunos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="templates/img/desenho.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Por que Intelecta?</span>
+                <h2 class="section-title">A Plataforma Completa para sua Aprovação</h2>
+                <p class="section-description">
+                    Desenvolvemos uma metodologia exclusiva que combina teoria, prática intensiva
+                    e acompanhamento personalizado para garantir seu sucesso.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #07336E 0%, #0a4a9e 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Conteúdo Estruturado</h3>
+                    <p class="feature-description">
+                        Todo o conteúdo de matemática do Ensino Médio organizado por temas,
+                        do básico ao avançado, seguindo o edital do ENEM e principais vestibulares.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #07336E 0%, #E1A03D 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Análise de Desempenho</h3>
+                    <p class="feature-description">
+                        Acompanhe sua evolução com relatórios detalhados, identifique
+                        pontos fracos e receba recomendações personalizadas de estudo.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #B4853E 0%, #07336E 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">100% Gratuito</h3>
+                    <p class="feature-description">
+                        Acesso completo e gratuito a todos os recursos da plataforma.
+                        Sem mensalidades, sem taxas ocultas, apenas foco nos seus estudos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="resources-section">
+        <div class="container">
+            <div class="resources-content">
+                <div class="resources-visual">
+                    <div class="resource-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="mockup-title">Plataforma Intelecta</span>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-sidebar">
+                                <div class="sidebar-item active">Geometria</div>
+                                <div class="sidebar-item">Estatística</div>
+                                <div class="sidebar-item">Cálculo</div>
+                                <div class="sidebar-item">Álgebra</div>
+                                <div class="sidebar-item">Trigonometria</div>
+                            </div>
+                            <div class="mockup-main">
+                                <div class="exercise-placeholder">
+                                    <div class="exercise-header">
+                                        <span class="exercise-tag">Geometria Plana</span>
+                                        <span class="exercise-difficulty">Médio</span>
+                                    </div>
+                                    <div class="exercise-content"></div>
+                                </div>
+                                <div class="content-items">
+                                    <div class="content-item"></div>
+                                    <div class="content-item"></div>
+                                    <div class="content-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resources-text">
+                    <span class="section-badge">Recursos Exclusivos</span>
+                    <h2 class="section-title">Foco Total em Exercícios de Matemática</h2>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Banco de Questões Completo</h4>
+                                <p>Milhares de exercícios organizados por tema e nível de dificuldade</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Resolução Detalhada</h4>
+                                <p>Cada exercício com resolução passo a passo e explicações claras</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Simulados Personalizados</h4>
+                                <p>Crie simulados customizados por tema e nível de dificuldade</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Acompanhamento de Progresso</h4>
+                                <p>Monitore seu desempenho e identifique áreas para melhorar</p>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-check">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="resource-info">
+                                <h4>Material Complementar</h4>
+                                <p>Fórmulas, resumos e dicas para otimizar seus estudos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Planos e Preços</span>
+                <h2 class="section-title">Escolha o Plano Ideal para Você</h2>
+                <p class="section-description">
+                    Comece gratuitamente e evolua conforme suas necessidades.
+                    Todos os planos incluem acesso completo aos exercícios de matemática.
+                </p>
+            </div>
+
+            <div class="pricing-toggle">
+                <span class="toggle-label">Mensal</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Anual <span class="discount-badge">-20%</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Gratuito</h3>
+                        <div class="plan-price">
+                            <span class="price-value">R$ 0</span>
+                        </div>
+                        <p class="plan-description">Perfeito para começar seus estudos</p>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Acesso a exercícios básicos</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Resolução passo a passo</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Progresso básico</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Suporte por email</span>
+                        </div>
+                    </div>
+
+                    <a href="View/cadastro.php" class="plan-button btn-outline">Começar Gratuitamente</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price">
+                            <span class="price-value monthly-price">R$ 29</span>
+                            <span class="price-value yearly-price">R$ 276</span>
+                            <span class="price-period">/ano</span>
+                        </div>
+                        <p class="plan-description">Ideal para estudantes focados</p>
+                    </div>
+
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Tudo do plano gratuito</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Exercícios avançados ilimitados</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Simulados personalizados</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Relatórios detalhados</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Suporte prioritário</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="plan-button btn-primary">Assinar Premium</a>
+                </div>
+            </div>
+
+            <div class="pricing-guarantee">
+                <div class="guarantee-content">
+                    <div class="guarantee-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#27C93F" stroke-width="2" />
+                            <path d="M9 12L11 14L15 10" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="guarantee-text">
+                        <h4>Garantia de 30 dias</h4>
+                        <p>Não ficou satisfeito? Devolvemos 100% do seu dinheiro, sem perguntas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Depoimentos</span>
+                <h2 class="section-title">O Que Nossos Alunos Dizem</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        O Intelecta mudou completamente minha relação com a matemática.
+                        Passei de 450 para 780 na nota do ENEM em apenas 6 meses!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Ana Maria Silva</h4>
+                            <p>Aprovada em Engenharia - USP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        Os exercícios são excelentes e a resolução detalhada realmente ajuda a entender.
+                        A plataforma é intuitiva e fácil de usar. Recomendo demais!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RC</div>
+                        <div class="author-info">
+                            <h4>Rafael Costa</h4>
+                            <p>Aprovado em Medicina - UFMG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#E1A03D">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        Incrível poder estudar gratuitamente com uma plataforma tão completa!
+                        O conteúdo é organizado e os simulados me prepararam muito bem.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>Juliana Santos</h4>
+                            <p>Aprovada em Arquitetura - UFRJ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para Conquistar sua Aprovação?</h2>
+                <p class="cta-description">
+                    Junte-se a milhares de alunos que já transformaram suas notas em matemática
+                    e conquistaram a vaga dos sonhos. Comece gratuitamente hoje!
+                </p>
+                <div class="cta-buttons">
+                    <a href="View/cadastro.php" class="btn-primary large">
+                        <span>Começar Gratuitamente</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <img src="templates/img/logo.png" alt="Intelecta Logo" class="logo">
+                        <span class="brand-name">Intelecta</span>
+                    </div>
+                    <p class="footer-description">
+                        A plataforma completa e gratuita de matemática para sua aprovação
+                        no ENEM, vestibulares e faculdade.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/login/?locale=pt_BR" class="social-link"
+                            aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/accounts/login/" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">Central de Ajuda</a></li>
+                            <li><a href="mailto:intelecta4@gmail.com?subject=D%C3%BAvida%2FFeedback&body=Ol%C3%A1%2C%20equipe%20Intelecta%21"
+                                    onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=intelecta4@gmail.com&su=D%C3%BAvida%2FFeedback&body=Ol%C3%A1%2C%20equipe%20Intelecta%21','_blank'); return false;">Contato</a>
+                            </li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intelecta. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="templates/js/index.js"></script>
+</body>
+
+</html>

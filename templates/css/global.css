@@ -1,0 +1,12 @@
+:root {
+    --azul-principal: #07336E;
+    --amarelo-marcacao: #B4853E;
+    --amarelo-principal: #E1A03D;
+    --branco: #FFFFFF;
+    --cinza-claro: #F8F9FA;
+    --cinza-medio: #6C757D;
+    --cinza-escuro: #2C3E50;
+    --sombra-suave: 0 0.125rem 0.5rem rgba(7, 51, 110, 0.08);
+    --sombra-media: 0 0.25rem 1rem rgba(7, 51, 110, 0.12);
+    --sombra-forte: 0 0.5rem 2rem rgba(7, 51, 110, 0.15);
+}
