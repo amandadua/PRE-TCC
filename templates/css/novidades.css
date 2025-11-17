@@ -1,0 +1,458 @@
+/* Variáveis de Cores (Mantidas) */
+:root {
+    --azul-principal: #07336E;
+    --amarelo-marcacao: #B4853E;
+    --amarelo-principal: #E1A03D;
+    --branco: #FFFFFF;
+    --cinza-claro: #F8F9FA;
+    --cinza-medio: #6C757D;
+    --cinza-escuro: #2C3E50;
+    --sombra-suave: 0 0.125rem 0.5rem rgba(7, 51, 110, 0.08);
+    --sombra-media: 0 0.25rem 1rem rgba(7, 51, 110, 0.12);
+}
+
+/* Base Style (Mantidos) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    background: var(--cinza-claro);
+    overflow-x: hidden;
+}
+
+body.novidades-page {
+    background-color: var(--branco); 
+}
+
+/* App Container (Base Mobile) */
+.app-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    background: var(--branco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 5rem; /* Espaço para a nav-bar inferior */
+}
+
+.novidades-page .app-container {
+    max-width: 100vw;
+    box-shadow: none;
+    padding-bottom: 5rem; /* Garante espaço no mobile */
+}
+
+/* Header (ALTERADO: Removendo borda e sombra no mobile/padrão) */
+.app-header {
+    position: sticky; /* Mantido fixo no topo */
+    top: 0;
+    background: var(--branco);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none; /* ALTERADO: Removida a borda/linha */
+    z-index: 100;
+    box-shadow: none; /* ALTERADO: Removida a sombra/linha */
+    width: 100%;
+}
+
+.welcome-text h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--azul-principal);
+}
+
+.welcome-text .thin-text { font-weight: 300; }
+.welcome-text strong { font-weight: 700; }
+
+.streak-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--cinza-claro);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.fire-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.streak-number {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--azul-principal);
+}
+
+/* NOVO: Navegação Desktop - Escondida por padrão */
+.desktop-nav {
+    display: none;
+}
+
+/* Main Content (Base Mobile) */
+.app-main {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+/* CONTROLES E FILTROS (ALTERADO: Fixo logo abaixo do header no mobile/tablet) */
+.news-controls-wrapper {
+    position: sticky; /* ALTERADO: Fixado no mobile/tablet */
+    top: 5rem; /* ALTERADO: Fixado logo abaixo do header (aprox. 5rem de altura) */
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background-color: var(--branco);
+    border-bottom: 0.0625rem solid #e9ecef;
+    box-shadow: var(--sombra-suave); /* Linha/sombra mantida aqui para ser a segunda linha */
+}
+
+.news-filters {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-grow: 1;
+    padding-bottom: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.filter-button {
+    background: var(--cinza-claro);
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cinza-medio);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background: var(--azul-principal);
+    color: var(--branco);
+}
+
+.clear-news-button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.5rem;
+    font-weight: 600;
+    color: var(--cinza-medio);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.clear-news-button:hover {
+    color: var(--amarelo-principal);
+}
+
+/* LISTA DE NOVIDADES (Mantida) */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.25rem;
+    flex: 1;
+}
+
+.news-card {
+    background-color: var(--branco);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: var(--cinza-escuro);
+    position: relative;
+    box-shadow: var(--sombra-suave);
+    border: 0.0625rem solid #e9ecef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    box-shadow: var(--sombra-media);
+    transform: translateY(-0.125rem);
+}
+
+.news-card.read {
+    opacity: 0.8;
+    background-color: var(--cinza-claro);
+}
+
+/* Indicador de Não Lido */
+.news-card.unread {
+    border-left: 0.25rem solid var(--amarelo-principal); 
+    padding-left: 1.25rem;
+}
+
+.news-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.news-badge {
+    background: var(--azul-principal);
+    color: var(--branco);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    color: var(--cinza-medio);
+}
+
+.news-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--azul-principal);
+    margin-bottom: 0.5rem;
+}
+
+.news-description {
+    font-size: 0.9375rem;
+    color: var(--cinza-escuro);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.read-toggle-button {
+    margin-top: auto;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: var(--amarelo-principal);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.news-section-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--azul-principal);
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+/* NAVEGAÇÃO INFERIOR (Mobile/Tablet) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--branco);
+    border-top: 0.0625rem solid #e9ecef;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0 0.5rem;
+    box-shadow: 0 -0.125rem 0.5rem rgba(7, 51, 110, 0.08);
+    z-index: 1000;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--cinza-medio);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    flex: 1;
+    max-width: 6rem;
+}
+
+.nav-item svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.nav-item span {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.nav-item.active {
+    color: var(--azul-principal);
+}
+
+.nav-item:hover {
+    color: var(--azul-principal);
+    background: var(--cinza-claro);
+}
+
+/* ======================================= */
+/* MEDIA QUERY: DESKTOP (A PARTIR DE 1024PX) */
+/* ======================================= */
+@media (min-width: 64rem) {
+    body.novidades-page {
+        background: var(--cinza-claro);
+    }
+
+    .app-container {
+        max-width: 100vw; 
+        padding: 0;
+        box-shadow: none;
+        padding-bottom: 0;
+    }
+
+    /* Ajuste no Header Desktop - Garante a fixação no topo e que ele está em cima da nav */
+    .app-header {
+        position: sticky; /* Mantido fixo no topo */
+        top: 0;
+        z-index: 150; /* Z-index maior que a nav-desktop */
+        background: var(--branco);
+    }
+
+    /* Oculta Navegação Inferior */
+    .bottom-nav {
+        display: none;
+    }
+
+    /* Mostra e Estiliza Navegação Superior (Sidebar) - AGORA FIXO ABAIXO DO HEADER */
+    .desktop-nav {
+        display: flex;
+        justify-content: space-around; 
+        gap: 0; 
+        background: var(--branco);
+        border-bottom: 0.0625rem solid #e9ecef;
+        box-shadow: var(--sombra-suave); /* Única linha sombreada mantida aqui */
+        padding: 0.5rem 0;
+        
+        position: sticky; /* ALTERADO: Fixo no modo desktop */
+        top: 5rem; /* ALTERADO: Fixado logo abaixo do header */
+        z-index: 100;
+        
+        max-width: none; 
+        margin: 0;
+        width: 100%;
+    }
+
+    .desktop-nav .nav-item {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 0.5rem; 
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        
+        flex: 1; 
+        max-width: 8rem; 
+    }
+
+    .desktop-nav .nav-item svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .desktop-nav .nav-item span {
+        font-size: 0.875rem;
+    }
+
+    .desktop-nav .nav-item.active {
+        border-bottom: none; 
+        color: var(--azul-principal);
+        background: var(--cinza-claro);
+        border-radius: 0.5rem;
+    }
+    
+    .desktop-nav .nav-item:hover {
+        background: var(--cinza-claro);
+        border-radius: 0.5rem;
+    }
+
+    /* Ajuste do Main Content para o Desktop */
+    .app-main {
+        max-width: 75rem; /* Limite do conteúdo principal */
+        margin: 0 auto;
+        padding: 2rem; /* Adicionar padding lateral novamente para o conteúdo */
+    }
+
+    /* Controles (Filtros e Limpar) no Desktop - Devem ser estáticos (não fixos) */
+    .news-controls-wrapper {
+        position: static; /* ALTERADO: Volta a ser estático no desktop */
+        box-shadow: none;
+        border-bottom: 0.0625rem solid #e9ecef;
+        padding: 0 0 1.5rem 0;
+        margin-bottom: 2rem;
+        background: transparent;
+        
+        justify-content: space-between; 
+    }
+    
+    .news-filters {
+        gap: 1rem; 
+        padding-bottom: 0;
+        margin-bottom: 0;
+        overflow: visible;
+        flex-grow: 0;
+    }
+    
+    .clear-news-button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--cinza-claro);
+        background: var(--cinza-claro);
+    }
+
+    /* Layout de Grade para a Lista de Novidades */
+    .news-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .news-section-group {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    .news-section-title {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajuste de Card no Desktop */
+    .news-card {
+        padding: 2rem;
+    }
+}
