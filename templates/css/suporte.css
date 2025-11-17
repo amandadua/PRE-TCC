@@ -1,0 +1,359 @@
+/* Variáveis de cores */
+:root {
+    --azul-principal: #07336E;
+    --amarelo-marcacao: #B4853E;
+    --amarelo-principal: #E1A03D;
+    --branco: #FFFFFF;
+    --cinza-claro: #F8F9FA;
+    --cinza-medio: #6C757D;
+    --cinza-escuro: #2C3E50;
+    --sombra-suave: 0 0.125rem 0.5rem rgba(7, 51, 110, 0.08);
+    --sombra-media: 0 0.25rem 1rem rgba(7, 51, 110, 0.12);
+}
+
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    padding: 2rem 1rem;
+    box-shadow: var(--sombra-media);
+    text-align: center;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Container wrapper para layout flexível */
+.container-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.nav-menu {
+    position: sticky;
+    top: 2rem;
+    background-color: var(--cinza-claro);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.nav-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--azul-principal);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-bottom: 0.75rem;
+}
+
+.nav-link {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--cinza-medio);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: left;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--amarelo-principal);
+    font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 900px;
+}
+
+/* Seções */
+.section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--cinza-claro);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--azul-principal);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.subsection-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cinza-escuro);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--cinza-escuro);
+}
+
+/* Definition Box */
+.definition-box {
+    background-color: var(--cinza-claro);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.definition-box p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.definition-box p:last-child {
+    margin-bottom: 0;
+}
+
+.definition-box strong {
+    color: var(--azul-principal);
+}
+
+/* Obligations List */
+.obligations-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+}
+
+.obligations-list li {
+    margin-bottom: 0.5rem;
+    color: var(--cinza-escuro);
+}
+
+/* Contact Box */
+.contact-box {
+    background-color: var(--cinza-claro);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-box p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.contact-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-box strong {
+    color: var(--azul-principal);
+}
+
+/* Last Update */
+.last-update {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--cinza-medio);
+    font-style: italic;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--amarelo-principal);
+    color: var(--branco);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--sombra-media);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--amarelo-marcacao);
+    transform: scale(1.1);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .nav-menu {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav-list li {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .subsection-title {
+        font-size: 1.1rem;
+    }
+
+    .container-wrapper {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .container-wrapper {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .definition-box,
+    .contact-box {
+        padding: 1rem;
+    }
+
+    .section p,
+    .definition-box p,
+    .contact-box p {
+        font-size: 0.95rem;
+    }
+}
