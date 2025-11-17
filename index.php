@@ -581,7 +581,7 @@
                             <li><a href="mailto:intelecta4@gmail.com?subject=D%C3%BAvida%2FFeedback&body=Ol%C3%A1%2C%20equipe%20Intelecta%21"
                                     onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=intelecta4@gmail.com&su=D%C3%BAvida%2FFeedback&body=Ol%C3%A1%2C%20equipe%20Intelecta%21','_blank'); return false;">Contato</a>
                             </li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="View/faq.html">FAQ</a></li>
                             <li><a href="View/suporte.html">Termos de Uso</a></li>
                         </ul>
                     </div>
