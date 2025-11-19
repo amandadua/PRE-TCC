@@ -9,31 +9,18 @@
 </head>
 
 <body>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app')
-    </script>
     <div class="app-container">
         <header class="app-header">
             <div class="welcome-text">
                 <h1><span class="thin-text">Bem-vindo(a) de volta,</span><br>
-                    <strong>Helena!🚀</strong>
+                    <strong>Helena🚀</strong>
                 </h1>
             </div>
-            <div class="streak-container">
-                <img src="src/img/icons8-elemento-fogo-32.png" alt="Ofensiva" class="fire-icon">
-                <span class="streak-number">0</span>
-            </div>
+
         </header>
 
- <nav class="desktop-nav">
-            <a href="inicio.html" class="nav-item active">
+        <nav class="desktop-nav">
+            <a href="inicio.php" class="nav-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M3 9L12 2L21 9V20C21 20.5 20.8 21 20.4 21.4C20 21.8 19.5 22 19 22H5C4.5 22 4 21.8 3.6 21.4C3.2 21 3 20.5 3 20V9Z" stroke="currentColor" stroke-width="2" />
                     <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" />
@@ -53,7 +40,7 @@
                 </svg>
                 <span>Novidades</span>
             </a>
-            <a href="perfil.html" class="nav-item">
+            <a href="perfil.php" class="nav-item active">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2" />
                     <path d="M3 21C3 17.1 7 14 12 14C17 14 21 17.1 21 21" stroke="currentColor" stroke-width="2" />
@@ -61,7 +48,6 @@
                 <span>Perfil</span>
             </a>
         </nav>
-
 
         <main class="app-main">
             <div class="profile-content">
@@ -72,7 +58,7 @@
                     <div class="form-group photo-upload">
                         <label>Foto</label>
                         <div class="photo-wrapper">
-                            <img src="<?= htmlspecialchars($foto); ?>" alt="Foto do usuário" id="profile-pic">
+                            <img src="https://i.ibb.co/xnT57Vr/Random-female-face-1.jpg" alt="Foto do usuário" id="profile-pic">
                             <input type="file" name="foto" id="file-input" accept="image/*" style="display: none;">
                             <button type="button" class="change-photo-btn" onclick="document.getElementById('file-input').click()">Alterar</button>
                         </div>
@@ -80,12 +66,12 @@
 
                     <div class="form-group">
                         <label for="novo_nome">Nome</label>
-                        <input type="text" id="novo_nome" name="novo_nome" value="Nome">
+                        <input type="text" id="novo_nome" name="novo_nome" value="helena">
                     </div>
 
                     <div class="form-group">
                         <label for="novo_email">Email</label>
-                        <input type="email" id="novo_email" name="novo_email" value="Email">
+                        <input type="email" id="novo_email" name="novo_email" value="helena@gmail.com">
                     </div>
 
                     <div class="form-group">
@@ -95,6 +81,33 @@
 
                     <div class="form-actions">
                         <button type="submit" name="salvar_nome_email" class="save-btn">Salvar Alterações</button>
+                    </div>
+
+                    <div class="plan-section">
+                        <h2>Plano e Assinatura</h2>
+                        <p>Gerencie seu plano atual</p>
+                        
+                        <div class="current-plan">
+                            <div class="plan-badge free">Plano Gratuito</div>
+                            <p class="plan-description">Acesso básico aos recursos da plataforma</p>
+                        </div>
+
+                        <div class="upgrade-box">
+                            <div class="upgrade-content">
+                                <h3>Faça upgrade para Premium</h3>
+                                <ul class="benefits-list">
+                                    <li>Acesso ilimitado a todos os exercícios</li>
+                                    <li>Suporte prioritário</li>
+                                    <li>Recursos exclusivos</li>
+                                    <li>Sem anúncios</li>
+                                </ul>
+                                <div class="price-tag">
+                                    <span class="price">R$ 29,00</span>
+                                    <span class="period">/mês</span>
+                                </div>
+                                <button type="button" class="upgrade-btn">Mudar para Premium</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="encerrar-conta">
@@ -114,3 +127,4 @@
     </div>
 </body>
 </html>
+
