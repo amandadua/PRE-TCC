@@ -144,10 +144,11 @@
                                 stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3 class="feature-title">100% Gratuito</h3>
+                    <h3 class="feature-title">Preço Acessível</h3>
                     <p class="feature-description">
-                        Acesso completo e gratuito a todos os recursos da plataforma.
-                        Sem mensalidades, sem taxas ocultas, apenas foco nos seus estudos.
+                        Acesso completo a todos os recursos da plataforma.
+                        Valor acessível para todos.
+
                     </p>
                 </div>
             </div>
