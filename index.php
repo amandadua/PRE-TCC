@@ -322,8 +322,6 @@
                             <span>Suporte por email</span>
                         </div>
                     </div>
-
-                    <a href="View/cadastro.php" class="plan-button btn-outline">Começar Gratuitamente</a>
                 </div>
 
                 <div class="pricing-card featured">
@@ -375,8 +373,6 @@
                             <span>Suporte prioritário</span>
                         </div>
                     </div>
-
-                    <a href="#" class="plan-button btn-primary">Assinar Premium</a>
                 </div>
             </div>
 
