@@ -9,7 +9,7 @@ class UserController
 {
     private $userModel;
 
-    public function __construct(User $userModel = null)
+    public function __construct(?User $userModel = null)
     {
         $this->userModel = $userModel ?? new User();
     }

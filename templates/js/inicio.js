@@ -1,79 +1,29 @@
-// Navegação Bottom Nav
 const navItems = document.querySelectorAll('.nav-item');
 
 navItems.forEach(item => {
     item.addEventListener('click', function(e) {
-        // Remove active de todos
         navItems.forEach(nav => nav.classList.remove('active'));
-        // Adiciona active no clicado
         this.classList.add('active');
     });
 });
 
-// --- Lógica de Sequência (Streak) ---
-
-// Função para buscar a sequência atual do backend
-async function fetchStreak() {
+async function loadProgress() {
     try {
-        const response = await fetch('./controller/sequencia.php?action=get');
+        const response = await fetch('controller/get-progress.php');
         const data = await response.json();
 
         if (data.success) {
-            updateStreak(data.streak_count);
-        } else {
-            console.error('Erro ao buscar sequência:', data.message);
-            // Opcional: Exibir uma mensagem de erro para o usuário
+            updateStats(
+                data.progress.total_exercises,
+                data.progress.correct_answers,
+                data.progress.total_minutes
+            );
         }
     } catch (error) {
-        console.error('Erro de rede ao buscar sequência:', error);
+        console.error('Erro ao carregar progresso:', error);
     }
 }
 
-// Função para notificar o backend sobre a conclusão de uma atividade
-async function completeActivity() {
-    try {
-        const response = await fetch('./controller/sequencia.php?action=complete_activity');
-        const data = await response.json();
-
-        if (data.success) {
-            updateStreak(data.streak_count);
-            console.log('Sequência atualizada:', data.message);
-        } else {
-            console.error('Erro ao atualizar sequência:', data.message);
-        }
-    } catch (error) {
-        console.error('Erro de rede ao atualizar sequência:', error);
-    }
-}
-
-// Animação do botão de começar desafio
-const challengeCards = document.querySelectorAll(".daily-challenge-grid .challenge-card");
-challengeCards.forEach(card => {
-    const btnStart = card.querySelector(".btn-start");
-    const challengeTitle = card.querySelector("h3").textContent;
-    if (btnStart) {
-        btnStart.addEventListener("click", function() {
-            alert(`Iniciando: ${challengeTitle}`);
-            // SIMULAÇÃO: Chamar completeActivity() após a conclusão do desafio
-             completeActivity(); 
-        });
-    }
-});
-
-// Animação dos cards de tópicos
-const topicCards = document.querySelectorAll('.topic-card');
-topicCards.forEach(card => {
-    card.addEventListener('click', function() {
-        const topicName = this.querySelector('h3').textContent;
-        alert(`Abrindo exercícios de ${topicName}...`);
-        // SIMULAÇÃO: Chamar completeActivity() após a conclusão de um exercício
-         completeActivity(); 
-    });
-});
-
-// --- Fim da Lógica de Sequência (Streak) ---
-
-// Botão de novidades
 const btnNews = document.querySelectorAll('.btn-news');
 if (btnNews) {
     btnNews.forEach(btn => {
@@ -84,7 +34,6 @@ if (btnNews) {
     });
 }
 
-// Animação de entrada dos elementos
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -99,7 +48,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar seções para animação
 const sections = document.querySelectorAll('.progress-section, .daily-challenge, .topics-section, .news-section');
 sections.forEach(section => {
     section.style.opacity = '0';
@@ -108,7 +56,6 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-// Efeito ripple nos botões
 function createRipple(event) {
     const button = event.currentTarget;
     const ripple = document.createElement('span');
@@ -129,7 +76,6 @@ function createRipple(event) {
     }, 600);
 }
 
-// Adicionar efeito ripple aos botões
 const buttons = document.querySelectorAll('.btn-start, .btn-news');
 buttons.forEach(button => {
     button.style.position = 'relative';
@@ -137,7 +83,6 @@ buttons.forEach(button => {
     button.addEventListener('click', createRipple);
 });
 
-// Estilo do ripple
 const style = document.createElement('style');
 style.textContent = `
     .ripple {
@@ -158,48 +103,12 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Atualizar progresso do desafio (simulação)
-function updateChallengeProgress(completed, total) {
-    const progressFill = document.querySelector('.progress-bar-fill');
-    const progressText = document.querySelector('.progress-text');
-    
-    if (progressFill && progressText) {
-        const percentage = (completed / total) * 100;
-        progressFill.style.width = percentage + '%';
-        progressText.textContent = `${completed}/${total} completos`;
-    }
+function updateStats(exercises, correct, minutes) {
+    document.getElementById('total-exercises').textContent = exercises;
+    document.getElementById('correct-answers').textContent = correct;
+    document.getElementById('total-minutes').textContent = minutes;
 }
 
-// Função para atualizar streak
-function updateStreak(days) {
-    const streakNumbers = document.querySelectorAll('.streak-number');
-    const streakDays = document.querySelector('.streak-days');
-    const streakSubtitle = document.querySelector('.streak-subtitle');
-    
-    streakNumbers.forEach(el => {
-        el.textContent = days;
-    });
-    
-    if (streakDays) {
-        streakDays.textContent = `${days} ${days === 1 ? 'dia' : 'dias'}`;
-    }
-    
-    if (streakSubtitle && days > 0) {
-        streakSubtitle.textContent = 'Continue assim!';
-    }
-}
-
-// Função para atualizar estatísticas
-function updateStats(exercises, minutes, correct) {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    if (statNumbers.length >= 3) {
-        statNumbers[0].textContent = exercises;
-        statNumbers[1].textContent = minutes;
-        statNumbers[2].textContent = correct;
-    }
-}
-
-// Scroll suave para elementos
 function smoothScroll(target) {
     const element = document.querySelector(target);
     if (element) {
@@ -210,16 +119,13 @@ function smoothScroll(target) {
     }
 }
 
-// Prevenir scroll horizontal
 document.addEventListener('touchmove', function(e) {
     if (e.touches.length > 1) {
         e.preventDefault();
     }
 }, { passive: false });
 
-// Log para debug
 console.log('%c🎓 Intelecta App', 'color: #07336E; font-size: 20px; font-weight: bold;');
-console.log('%cBem-vinda, Helena! Pronta para dominar a matemática?', 'color: #E1A03D; font-size: 14px;');
+console.log('%cBem-vinda! Pronta para dominar a matemática?', 'color: #E1A03D; font-size: 14px;');
 
-// Carregar a sequência ao carregar a página
-document.addEventListener('DOMContentLoaded', fetchStreak);
+document.addEventListener('DOMContentLoaded', loadProgress);

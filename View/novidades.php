@@ -1,3 +1,15 @@
+<?php
+// Inicia a sessão para acessar o nome do usuário
+session_start();
+
+// Inclui os arquivos de configuração e classes necessárias (se for usar o UserController aqui)
+// Para simplificar, vamos apenas verificar se o nome do usuário está na sessão
+$userName = $_SESSION['nome'] ?? 'Visitante';
+
+// Se a página for privada, você deve incluir a lógica de autenticação aqui
+// if (!isset($_SESSION['id'])) { header('Location: login.php'); exit; }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

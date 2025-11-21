@@ -1,3 +1,31 @@
+<?php
+require_once '../Config/configuration.php';
+require_once '../Model/Connection.php';
+require_once '../Model/User.php';
+require_once '../Model/Progress.php';
+require_once '../Controller/UserController.php';
+require_once '../Controller/ProgressController.php';
+
+use Controller\UserController;
+use Controller\ProgressController;
+
+$userController = new UserController();
+$progressController = new ProgressController();
+
+if (!$userController->isLoggedIn()) {
+    header('Location: index.php');
+    exit;
+}
+
+$userData = $userController->getUserData();
+$progressData = $progressController->getUserProgress($userData['id']);
+
+$nome = htmlspecialchars($userData['nome']);
+$totalExercises = $progressData['total_exercises'] ?? 0;
+$correctAnswers = $progressData['correct_answers'] ?? 0;
+$totalMinutes = $progressData['total_minutes'] ?? 0;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -55,7 +83,7 @@
                 </svg>
                 <span>Exercícios</span>
             </a>
-            <a href="novidades.html" class="nav-item">
+            <a href="novidades.php" class="nav-item">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" fill="none" />

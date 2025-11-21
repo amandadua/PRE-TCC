@@ -155,10 +155,12 @@ let currentQuestion = 0;
 let selectedAnswer = null;
 let correctAnswers = 0;
 let wrongAnswers = 0;
+let startTime = Date.now();
 
 document.addEventListener('DOMContentLoaded', function() {
     loadQuestion();
     updateProgressBar();
+    startTime = Date.now();
 });
 
 function loadQuestion() {
@@ -288,7 +290,39 @@ function finishExercise() {
     
     document.getElementById('results-message').textContent = message;
     
+    saveProgress(); // CHAMA A FUNÇÃO PARA SALVAR O PROGRESSO
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function saveProgress() {
+    const timeSpent = Math.round((Date.now() - startTime) / 1000); // Tempo em segundos
+
+    const data = {
+        total_questions: questions.length,
+        correct_answers: correctAnswers,
+        time_spent: timeSpent
+    };
+
+    fetch('../save-progress.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Progresso salvo com sucesso:', data.progress);
+            // Opcional: Atualizar o painel de progresso na página atual se necessário
+        } else {
+            console.error('Erro ao salvar progresso:', data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erro de rede ao salvar progresso:', error);
+    });
 }
 
 function restartExercise() {

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $senha = $_POST['senha'];
 
         if ($userController->login($email, $senha)) {
-            header('Location: ../View/inicio.html');
+            header('Location: ../View/inicio.php');
             exit();
         } else {
             $loginMessage = 'E-mail ou senha incorretos.';
