@@ -384,7 +384,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="payment-options">
 
                         <a href="javascript:void(0);" class="payment-btn pix-btn" onclick="openPixModal()">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Capa_do_Pix_no_Brasil.svg/300px-Capa_do_Pix_no_Brasil.svg.png" alt="Logo Pix" class="payment-icon">
+                            <img src="../templates/img/pix.png" alt="Logo Pix" class="payment-icon">
                             Pagar com Pix
                         </a>
                         
