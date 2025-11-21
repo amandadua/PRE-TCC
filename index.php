@@ -279,7 +279,7 @@
                     <div class="plan-header">
                         <h3 class="plan-name">Mensal</h3>
                         <div class="plan-price">
-                            <span class="price-value">R$ 30</span>
+                            <span class="price-value">R$ 125</span>
                             <span class="price-period">/mês</span>
                         </div>
                         <p class="plan-description">Flexibilidade total para seu estudo</p>
@@ -322,8 +322,8 @@
                     <div class="plan-header">
                         <h3 class="plan-name">Anual</h3>
                         <div class="plan-price">
-                            <span class="price-value monthly-price">R$ 300</span>
-                            <span class="price-period">/ano (R$ 25/mês)</span>
+                            <span class="price-value monthly-price">R$ 1.440</span>
+                            <span class="price-period">/ano (R$ 120/mês)</span>
                         </div>
                         <p class="plan-description">Ideal para o ano letivo completo</p>
                     </div>
