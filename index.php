@@ -52,7 +52,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-badge">
-                    <span>Plataforma de Matemática por Assinatura</span>
+                    <span>Plataforma de Matemática</span>
                 </div>
                 <h1 class="hero-title">
                     Domine a Matemática e
