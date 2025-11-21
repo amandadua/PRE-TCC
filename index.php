@@ -144,18 +144,11 @@
                                 stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-<<<<<<< HEAD
-                    <h3 class="feature-title">Acesso Total</h3>
-                    <p class="feature-description">
-                        Acesso completo a todos os recursos da plataforma.
-                        Valor que cabe no seu bolso para a sua aprovação.
-=======
                     <h3 class="feature-title">Preço Acessível</h3>
                     <p class="feature-description">
                         Acesso completo a todos os recursos da plataforma.
                         Valor acessível para todos.
 
->>>>>>> ddcb5b5b1ba67df3eda076d1216acceb0fe4fa21
                     </p>
                 </div>
             </div>
