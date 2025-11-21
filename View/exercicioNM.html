@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Naturais - Intelecta</title>
+    <link rel="stylesheet" href="../templates/css/exercicioNM.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app')
+    </script>
+
+    <div class="exercise-container">
+
+        <div class="exercise-header">
+            <button class="btn-back" onclick="window.location.href='../View/exercicios.html'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Voltar
+            </button>
+            <div class="exercise-title-header">
+                <h1>Números Naturais</h1>
+                <p>Operações básicas e propriedades</p>
+            </div>
+            <div class="progress-info">
+                <span class="question-counter">
+                    <span id="current-question">1</span>/<span id="total-questions">25</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar-fill-main" id="progress-bar"></div>
+        </div>
+
+        <div class="question-card" id="question-card">
+            <div class="question-number">Questão <span id="question-num">1</span></div>
+            <h2 class="question-text" id="question-text"></h2>
+
+            <div class="options-container" id="options-container"></div>
+
+            <div class="feedback-container" id="feedback-container" style="display: none;"></div>
+
+            <div class="button-container">
+                <button class="btn-check-answer" id="btn-check" onclick="checkAnswer()">Verificar Resposta</button>
+                <button class="btn-next-question" id="btn-next" onclick="nextQuestion()" style="display: none;">Próxima
+                    Questão</button>
+                <button class="btn-finish" id="btn-finish" onclick="finishExercise()" style="display: none;">Finalizar
+                    Exercícios</button>
+            </div>
+        </div>
+
+        <div class="results-card" id="results-card" style="display: none;">
+            <div class="results-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="#E1A03D" stroke-width="2" fill="none" />
+                    <path d="M9 12l2 2 4-4" stroke="#E1A03D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <h2>Exercícios Concluídos!</h2>
+            <div class="results-stats">
+                <div class="stat-result">
+                    <span class="stat-result-number" id="correct-answers">0</span>
+                    <span class="stat-result-label">Acertos</span>
+                </div>
+                <div class="stat-result">
+                    <span class="stat-result-number" id="wrong-answers">0</span>
+                    <span class="stat-result-label">Erros</span>
+                </div>
+                <div class="stat-result">
+                    <span class="stat-result-number" id="final-score">0%</span>
+                    <span class="stat-result-label">Aproveitamento</span>
+                </div>
+            </div>
+            <div class="results-message" id="results-message"></div>
+            <div class="results-buttons">
+                <button class="btn-restart" onclick="restartExercise()">Refazer Exercícios</button>
+                <button class="btn-back-exercises" onclick="window.location.href='exercicios.html'">Voltar para
+                    Exercícios</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../templates/js/exercicioNM.js"></script>
+</body>
+
+</html>

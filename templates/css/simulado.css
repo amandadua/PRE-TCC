@@ -10,14 +10,13 @@
     --cinza-medio: #6C757D;
     --cinza-escuro: #2C3E50;
     
-    /* Mapeamento de Cores para o Layout */
+    
     --header-color-bg: var(--amarelo-principal); 
     --header-color-text: var(--branco); 
     
     --main-action-color: var(--amarelo-marcacao); 
-    --highlight-color: var(--amarelo-principal); /* Questão atual */
-    --answered-color: var(--amarelo-marcacao); /* Questão respondida */
-    
+    --highlight-color: var(--amarelo-principal); 
+    --answered-color: var(--amarelo-marcacao); 
     --background-color: var(--cinza-claro);
     --text-primary: var(--cinza-escuro);
     --text-secondary: var(--cinza-medio);
