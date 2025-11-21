@@ -33,12 +33,12 @@
             <ul class="nav-menu">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#planos">Planos</a></li>
+                <li><a href="#planos">Assinatura</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="View/login.php" class="btn-login">Entrar</a>
-                <a href="View/cadastro.php" class="btn-cta">Começar Agora</a>
+                <a href="View/cadastro.php" class="btn-cta">Assinar Agora</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Menu">
                 <span></span>
@@ -52,20 +52,20 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-badge">
-                    <span>Plataforma gratuita de Matemática</span>
+                    <span>Plataforma de Matemática por Assinatura</span>
                 </div>
                 <h1 class="hero-title">
                     Domine a Matemática e
                     <span class="highlight">Conquiste sua Aprovação</span>
                 </h1>
                 <p class="hero-description">
-                    A plataforma completa e gratuita para estudantes do 3º ano do Ensino Médio que querem
+                    A plataforma completa por assinatura para estudantes do 3º ano do Ensino Médio que querem
                     alcançar a nota máxima em Matemática no ENEM, vestibulares e faculdade.
                     Aprenda com exercícios práticos e metodologia comprovada.
                 </p>
                 <div class="hero-cta">
                     <a href="View/cadastro.php" class="btn-primary">
-                        <span><strong>Começar Gratuitamente</strong></span>
+                        <span><strong>Começar Assinatura</strong></span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -144,10 +144,10 @@
                                 stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3 class="feature-title">100% Gratuito</h3>
+                    <h3 class="feature-title">Acesso Total</h3>
                     <p class="feature-description">
-                        Acesso completo e gratuito a todos os recursos da plataforma.
-                        Sem mensalidades, sem taxas ocultas, apenas foco nos seus estudos.
+                        Acesso completo a todos os recursos da plataforma.
+                        Valor que cabe no seu bolso para a sua aprovação.
                     </p>
                 </div>
             </div>
@@ -265,31 +265,23 @@
     <section id="planos" class="pricing-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Planos e Preços</span>
-                <h2 class="section-title">Escolha o Plano Ideal para Você</h2>
+                <span class="section-badge">Assinatura</span>
+                <h2 class="section-title">Acesso Total por um Preço Fixo</h2>
                 <p class="section-description">
-                    Comece gratuitamente e evolua conforme suas necessidades.
-                    Todos os planos incluem acesso completo aos exercícios de matemática.
+                    Escolha a modalidade de pagamento que melhor se encaixa no seu planejamento.
+                    Acesso completo a todos os exercícios e recursos.
                 </p>
             </div>
 
-            <div class="pricing-toggle">
-                <span class="toggle-label">Mensal</span>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="pricing-toggle">
-                    <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Anual <span class="discount-badge">-20%</span></span>
-            </div>
-
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card" style="opacity: 0.5;">
                     <div class="plan-header">
-                        <h3 class="plan-name">Gratuito</h3>
+                        <h3 class="plan-name">Mensal</h3>
                         <div class="plan-price">
-                            <span class="price-value">R$ 0</span>
+                            <span class="price-value">R$ 30</span>
+                            <span class="price-period">/mês</span>
                         </div>
-                        <p class="plan-description">Perfeito para começar seus estudos</p>
+                        <p class="plan-description">Flexibilidade total para seu estudo</p>
                     </div>
 
                     <div class="plan-features">
@@ -298,7 +290,7 @@
                                 <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span>Acesso a exercícios básicos</span>
+                            <span>Acesso Ilimitado a Exercícios</span>
                         </div>
                         <div class="feature-item">
                             <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -312,30 +304,27 @@
                                 <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span>Progresso básico</span>
+                            <span>Simulados personalizados</span>
                         </div>
                         <div class="feature-item">
                             <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span>Suporte por email</span>
+                            <span>Acompanhamento de progresso</span>
                         </div>
                     </div>
-
-                    <a href="View/cadastro.php" class="plan-button btn-outline">Começar Gratuitamente</a>
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="popular-badge">Plano pago</div>
+                    <div class="popular-badge">Mais Econômico</div>
                     <div class="plan-header">
-                        <h3 class="plan-name">Premium</h3>
+                        <h3 class="plan-name">Anual</h3>
                         <div class="plan-price">
-                            <span class="price-value monthly-price">R$ 29</span>
-                            <span class="price-value yearly-price">R$ 276</span>
-                            <span class="price-period">/ano</span>
+                            <span class="price-value monthly-price">R$ 300</span>
+                            <span class="price-period">/ano (R$ 25/mês)</span>
                         </div>
-                        <p class="plan-description">Ideal para estudantes focados</p>
+                        <p class="plan-description">Ideal para o ano letivo completo</p>
                     </div>
 
                     <div class="plan-features">
@@ -344,14 +333,14 @@
                                 <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span>Tudo do plano gratuito</span>
+                            <span>Acesso Ilimitado a Exercícios</span>
                         </div>
                         <div class="feature-item">
                             <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M20 6L9 17L4 12" stroke="#27C93F" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                            <span>Exercícios avançados ilimitados</span>
+                            <span>Resolução passo a passo</span>
                         </div>
                         <div class="feature-item">
                             <svg class="feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -375,8 +364,6 @@
                             <span>Suporte prioritário</span>
                         </div>
                     </div>
-
-                    <a href="#" class="plan-button btn-primary">Assinar Premium</a>
                 </div>
             </div>
 
@@ -501,8 +488,8 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                        Incrível poder estudar gratuitamente com uma plataforma tão completa!
-                        O conteúdo é organizado e os simulados me prepararam muito bem.
+                        A plataforma me ajudou a sair do zero em matemática.
+                        O conteúdo é organizado e os simulados me prepararam muito bem para o ENEM.
                     </p>
                     <div class="testimonial-author">
                         <div class="author-avatar">JS</div>
@@ -522,18 +509,18 @@
                 <h2 class="cta-title">Pronto para Conquistar sua Aprovação?</h2>
                 <p class="cta-description">
                     Junte-se a milhares de alunos que já transformaram suas notas em matemática
-                    e conquistaram a vaga dos sonhos. Comece gratuitamente hoje!
+                    e conquistaram a vaga dos sonhos. Assine hoje por apenas R$ 30/mês!
                 </p>
                 <div class="cta-buttons">
                     <a href="View/cadastro.php" class="btn-primary large">
-                        <span>Começar Gratuitamente</span>
+                        <span>Assinar Agora</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
